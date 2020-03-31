@@ -17,7 +17,12 @@ const weatherForm = document.querySelector('#weatherForm');
 const search = document.querySelector('#location');
 const msgOne = document.querySelector('#msg1');
 const msgTwo = document.querySelector('#msg2');
+const flag = false;
 
+let host ='/weather?address=';
+if(flag){
+    host='http://localhost:3000/weather?address=';
+}
 if(weatherForm){
 
     weatherForm.addEventListener('submit', (e) => {
@@ -28,7 +33,7 @@ if(weatherForm){
         msgOne.textContent = 'Loading ...';
         msgTwo.textContent = '';
         
-        fetch('http://localhost:3000/weather?address='+location)
+        fetch(host+location)
             .then(response => {
                 console.log(response)
                 return response.json()
