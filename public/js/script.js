@@ -17,7 +17,7 @@ const weatherForm = document.querySelector('#weatherForm');
 const search = document.querySelector('#location');
 const msgOne = document.querySelector('#msg1');
 const msgTwo = document.querySelector('#msg2');
-const flag = false;
+const flag = true;
 
 let host ='/weather?address=';
 if(flag){
